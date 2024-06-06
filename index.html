@@ -4,16 +4,139 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Burst Launcher</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #fff;
+        }
+        .header {
+            background-color: #1e1e1e;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        .logo img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+        .sidebar {
+            background-color: #1e1e1e;
+            width: 250px;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            margin: 20px 0;
+        }
+        .sidebar ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .main {
+            margin-left: 270px;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .main .content {
+            max-width: 600px;
+        }
+        .main .content h1 {
+            font-size: 48px;
+            color: #0aff0a;
+        }
+        .main .content p {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+        .main .content .devices {
+            margin-top: 30px;
+            font-size: 18px;
+        }
+        .main .content .devices img {
+            width: 32px;
+            height: 32px;
+            margin-right: 10px;
+        }
+        .main .image {
+            position: relative;
+        }
+        .main .image img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .main .download-button {
+            display: block;
+            margin: 40px 0;
+            padding: 15px 25px;
+            background-color: #0aff0a;
+            color: #000;
+            text-align: center;
+            text-decoration: none;
+            font-size: 24px;
+            border-radius: 5px;
+            animation: glowing 1.5s infinite;
+        }
+        @keyframes glowing {
+            0% { box-shadow: 0 0 5px #0aff0a; }
+            50% { box-shadow: 0 0 20px #0aff0a; }
+            100% { box-shadow: 0 0 5px #0aff0a; }
+        }
+        .version-text {
+            font-size: 32px;
+            color: #0aff0a;
+            animation: neon 2s infinite;
+        }
+        @keyframes neon {
+            0% { text-shadow: 0 0 5px #0aff0a, 0 0 10px #0aff0a, 0 0 15px #0aff0a; }
+            50% { text-shadow: 0 0 20px #0aff0a, 0 0 30px #0aff0a, 0 0 40px #0aff0a; }
+            100% { text-shadow: 0 0 5px #0aff0a, 0 0 10px #0aff0a, 0 0 15px #0aff0a; }
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <div class="top-right">
-            <img src="photo.png" alt="Burst Launcher Image" class="top-right-img">
-            <a href="download-link" class="download-button">Download</a>
+    <div class="header">
+        <div class="logo">
+            <img src="https://via.placeholder.com/40" alt="Logo">
+            <span>Burst Launcher</span>
         </div>
-        <div class="message">
-            <h1>Burst Launcher 0.1 is not Launched</h1>
+    </div>
+    <div class="sidebar">
+    </div>
+    <div class="main">
+        <div class="content">
+            <h1>Burst Launcher</h1>
+            <p class="version-text">0.1 is out</p>
+            <div class="devices">
+                
+            </div>
+            <a href="#" class="download-button">Download Now</a>
+        </div>
+        <div class="image">
+            <img src="http://burstclient.000.pe/logo.png" alt="Game Preview">
         </div>
     </div>
 </body>
